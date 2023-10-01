@@ -1,0 +1,61 @@
+@media (max-width: 769px) {
+  main::after {
+    background: linear-gradient(
+        0deg,
+        rgb(0, 0, 0) 20%,
+        rgba(0, 0, 0, 0.5212264150943396) 50%,
+        rgba(0, 0, 0, 0.035377358490566) 60%
+      )
+      no-repeat;
+    width: 100vw;
+  }
+  main .character .image {
+    height: 85%;
+  }
+  .content {
+    justify-content: flex-end;
+    left: 0;
+    top: -20%;
+    max-width: 100vw;
+    padding: 30px;
+  }
+  .content .character-name {
+    font-size: 36px;
+  }
+  .content .description {
+    max-width: 500px;
+  }
+  .buttons {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    padding: 30px;
+  }
+  .buttons .button img {
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 425px) {
+  main .character .image {
+    height: auto;
+  }
+  .content .icon {
+    width: 170px;
+    height: 75px;
+  }
+  .content {
+    top: -30%;
+  }
+
+  .content .character-name {
+    font-size: 26px;
+  }
+  .buttons {
+    padding: 20px;
+    top: -15%;
+  }
+  .buttons .button img {
+    max-width: 50px;
+  }
+}

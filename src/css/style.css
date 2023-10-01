@@ -1,0 +1,96 @@
+body {
+  background-color: black;
+  overflow: hidden;
+}
+main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 80vw;
+  background: linear-gradient(
+      126deg,
+      rgb(0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.5212264150943396) 50%,
+      rgba(0, 0, 0, 0.035377358490566) 60%
+    )
+    no-repeat;
+}
+.character {
+  display: none;
+  height: 100vh;
+}
+
+main .selected.character {
+  display: block;
+}
+
+main .character .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* para manter as dimensoes da imagem e vai cobrir o elemento */
+}
+
+.content {
+  position: absolute; /* coloca as coisas por cima, fica destacado */
+  top: 0;
+  left: 120px;
+  display: flex;
+  flex-direction: column; /* dentro do flex vai ficar ajeitado por coluna */
+  justify-content: center; /* ele n ajeitou no centro pois n tem espaço no conteudo*/
+  min-height: 100vh; /* agora ajeitou pois aumentamos o tamanho do conteudo */
+  max-width: 380px;
+  z-index: 1; /* eixo de profundidade z */
+}
+.content .character-name {
+  color: white;
+  font-size: 48px;
+  font-family: "Secular One";
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.content .description {
+  color: white;
+  font-family: "Rubik";
+  line-height: 24px;
+}
+
+.content .icon {
+  background-image: url("/src/Images/one-piece-logo.png");
+  background-size: cover; /* temos q usar para aparecer a imagem de background*/
+  height: 100px;
+  width: 230px;
+  margin-bottom: 35px;
+}
+
+.buttons {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 180px;
+  justify-content: center; /* alinhamento vertical */
+  align-items: center; /* alinhamento horizontal*/
+  gap: 10px; /* espaça os elementos q estao dentro do flex */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.buttons .button {
+  border: none; /* tira a borda branca */
+  background: black;
+  cursor: pointer; /* fica com o cursor de maozinha  */
+  border-radius: 50%;
+}
+
+.button img {
+  border-radius: 50%; /* vai deixar redondo*/
+}
+
+.buttons .selected.button {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
